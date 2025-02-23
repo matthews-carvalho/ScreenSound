@@ -3,3 +3,7 @@
 
 # Logs
 *.log
+
+# Compiled binaries and temporary files
+bin/
+obj/
