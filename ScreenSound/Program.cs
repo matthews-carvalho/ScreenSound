@@ -18,7 +18,7 @@ void Menu()
             RegisterBand();
             break;
         case 2:
-            Console.WriteLine("Display Bands");
+            DisplayBands();
             break;
         case 3:
             Console.WriteLine("Rate Band");
@@ -45,6 +45,22 @@ void RegisterBand()
     registeredBands.Add(bandName, new List<int>());
     Console.WriteLine($"\nBand {bandName} has been registered successfully");
     Thread.Sleep(3000);
+    Console.Clear();
+    Menu();
+}
+
+void DisplayBands()
+{
+    Console.Clear();
+    Console.WriteLine("*************");
+    Console.WriteLine("Display Bands");
+    Console.WriteLine("*************");
+    for (int i = 0; i < registeredBands.Count; i++)
+    {
+        Console.WriteLine($"{i + 1}. {registeredBands.Keys.ElementAt(i)}");
+    }
+    Console.WriteLine("\nPress any key to return to the menu...");
+    Console.ReadKey();
     Console.Clear();
     Menu();
 }
