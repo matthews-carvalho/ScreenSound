@@ -65,4 +65,28 @@ void DisplayBands()
     Menu();
 }
 
+void RateBand()
+{
+    Console.Clear();
+    Console.WriteLine("*************");
+    Console.WriteLine("Rate Band");
+    Console.WriteLine("*************");
+    Console.WriteLine("Enter the band's name: ");
+    string bandName = Console.ReadLine()!;
+    if (registeredBands.ContainsKey(bandName))
+    {
+        Console.WriteLine("Enter the rating: ");
+        int rating = int.Parse(Console.ReadLine()!);
+        registeredBands[bandName].Add(rating);
+        Console.WriteLine("Rating added successfully");
+    }
+    else
+    {
+        Console.WriteLine("Band not found");
+    }
+    Thread.Sleep(3000);
+    Console.Clear();
+    Menu();
+}
+
 Menu();
