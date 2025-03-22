@@ -102,7 +102,10 @@ void DisplayBandDetails()
         List<int> ratings = registeredBands[bandName];
         Console.WriteLine($"Band: {bandName}");
         Console.WriteLine($"Ratings: {string.Join(", ", ratings)}");
-        Console.WriteLine($"Average rating: {ratings.Average()}");
+        if (ratings.Count > 0)
+        {
+            Console.WriteLine($"Average rating: {ratings.Average()}");
+        }
     }
     else
     {
