@@ -24,7 +24,7 @@ void Menu()
             RateBand();
             break;
         case 4:
-            Console.WriteLine("Display Band Details");
+            DisplayBandDetails();
             break;
         case 0:
             return;
