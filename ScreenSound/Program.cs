@@ -21,7 +21,7 @@ void Menu()
             DisplayBands();
             break;
         case 3:
-            Console.WriteLine("Rate Band");
+            RateBand();
             break;
         case 4:
             Console.WriteLine("Display Band Details");
