@@ -89,4 +89,28 @@ void RateBand()
     Menu();
 }
 
+void DisplayBandDetails()
+{
+    Console.Clear();
+    Console.WriteLine("********************");
+    Console.WriteLine("Display Band Details");
+    Console.WriteLine("********************");
+    Console.Write("Enter the band's name: ");
+    string bandName = Console.ReadLine()!;
+    if (registeredBands.ContainsKey(bandName))
+    {
+        List<int> ratings = registeredBands[bandName];
+        Console.WriteLine($"Band: {bandName}");
+        Console.WriteLine($"Ratings: {string.Join(", ", ratings)}");
+        Console.WriteLine($"Average rating: {ratings.Average()}");
+    }
+    else
+    {
+        Console.WriteLine("Band not found");
+    }
+    Thread.Sleep(3000);
+    Console.Clear();
+    Menu();
+}
+
 Menu();
