@@ -111,7 +111,8 @@ void DisplayBandDetails()
     {
         Console.WriteLine("Band not found");
     }
-    Thread.Sleep(3000);
+    Console.WriteLine("\nPress any key to return to the menu...");
+    Console.ReadKey();
     Console.Clear();
     Menu();
 }
